@@ -24,7 +24,7 @@ export default function StoryGeneration() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         prompt = data.get('Prompt')
-        fetch('http://localhost:8000/createStory', {
+        fetch('https://openai-demo-pkql.onrender.com/createStory', {
             method: "POST",
             body: JSON.stringify({
                 prompt
@@ -89,8 +89,8 @@ export default function StoryGeneration() {
                     </Typography>
                     <Box component="form" onSubmit={handleSubmit}>
                         <Typography>
-                        {message || "NA"}
-                    </Typography>
+                            {message || "NA"}
+                        </Typography>
                     </Box>
                 </Box>
             </Container>

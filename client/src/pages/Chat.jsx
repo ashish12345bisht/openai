@@ -47,7 +47,7 @@ const Chat = () => {
             tempChat.push({ content: prompt, role: "user" })
             setChat(tempChat)
             setPrompt("")
-            fetch('http://localhost:8000/chat', {
+            fetch('https://openai-demo-pkql.onrender.com/chat', {
                 method: "POST",
                 body: JSON.stringify({
                     prompt

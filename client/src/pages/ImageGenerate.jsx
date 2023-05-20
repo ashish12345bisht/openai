@@ -24,7 +24,7 @@ export default function ImageGenerate() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         prompt = data.get('Prompt')
-        fetch('http://localhost:8000/images', {
+        fetch('https://openai-demo-pkql.onrender.com/images', {
             method: "POST",
             body: JSON.stringify({
                 prompt
